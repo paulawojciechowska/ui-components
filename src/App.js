@@ -12,6 +12,7 @@ import AccordionFaq from "episodes/AccordionFaq/AccordionFaq";
 import Sidebar from "episodes/Sidebar/Sidebar";
 import Combobox from "episodes/Combobox/Combobox";
 import FancyButtons from "episodes/FancyButtons/FancyButtons";
+import CoolTransitions from "episodes/CoolTransitions/CoolTransitions";
 
 const App = () => {
   return (
@@ -34,6 +35,9 @@ const App = () => {
           </Route>
           <Route path="/fancy-buttons">
             <FancyButtons />
+          </Route>
+          <Route path="/cool-transitions">
+            <CoolTransitions />
           </Route>
           <Route path="/">
             <Welcome />

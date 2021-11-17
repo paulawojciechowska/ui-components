@@ -14,6 +14,7 @@ const Nav = styled.nav`
   top: 50px;
   transform: translateX(${({isOpen}) => isOpen ? '0' : '100%'});
   transition: transform 0.5s ease-in-out;
+  z-index: 10;
 `;
 
 const NavList = styled.ul`
@@ -50,33 +51,37 @@ const NavButton = styled.button`
 `;
 
 const Navigation = () => {
-    const [isOpen, setIsOpen] = React.useState(false);
 
-    return (
-        <Nav isOpen={isOpen}>
-            <NavButton onClick={() => setIsOpen(!isOpen)}>🍔</NavButton>
-            <NavList>
-                <NavListItem>
-                    <StyledNavLink isOpen={isOpen} exact to="/">Home</StyledNavLink>
-                </NavListItem>
-                <NavListItem>
-                    <StyledNavLink isOpen={isOpen} to="/infinite-scroll">Infinite Scroll</StyledNavLink>
-                </NavListItem>
-                <NavListItem>
-                  <StyledNavLink isOpen={isOpen} to="/accordion-faq">Accordion Faq</StyledNavLink>
-                </NavListItem>
-                <NavListItem>
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+      <Nav isOpen={isOpen}>
+          <NavButton onClick={() => setIsOpen(!isOpen)}>🍔</NavButton>
+          <NavList>
+              <NavListItem>
+                <StyledNavLink isOpen={isOpen} exact to="/">Home</StyledNavLink>
+              </NavListItem>
+              <NavListItem>
+                <StyledNavLink isOpen={isOpen} to="/infinite-scroll">Infinite Scroll</StyledNavLink>
+              </NavListItem>
+              <NavListItem>
+                <StyledNavLink isOpen={isOpen} to="/accordion-faq">Accordion Faq</StyledNavLink>
+              </NavListItem>
+              <NavListItem>
                 <StyledNavLink isOpen={isOpen} to="/sidebar">Sidebar</StyledNavLink>
-                </NavListItem>
-                <NavListItem>
+              </NavListItem>
+              <NavListItem>
                 <StyledNavLink isOpen={isOpen} to="/combobox">Combobox</StyledNavLink>
-                </NavListItem>
-                <NavListItem>
+              </NavListItem>
+              <NavListItem>
                 <StyledNavLink isOpen={isOpen} to="/fancy-buttons">Fancy Buttons</StyledNavLink>
-                </NavListItem>
-            </NavList>
-        </Nav>
-    )
+              </NavListItem>
+              <NavListItem>
+                <StyledNavLink isOpen={isOpen} to="/cool-transitions">Cool Transitions</StyledNavLink>
+              </NavListItem>
+          </NavList>
+      </Nav>
+  )
 };
 
 export default Navigation;

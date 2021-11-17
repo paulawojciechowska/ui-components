@@ -52,7 +52,7 @@ const ButtonA = styled(StyledButton)`
     }
 `;
 
-const ButtonB = styled(StyledButton)`
+export const ButtonB = styled(StyledButton)`
     position: relative;
     border: 4px solid black;
     outline-offset: 0;
