@@ -13,6 +13,7 @@ import Sidebar from "episodes/Sidebar/Sidebar";
 import Combobox from "episodes/Combobox/Combobox";
 import FancyButtons from "episodes/FancyButtons/FancyButtons";
 import CoolTransitions from "episodes/CoolTransitions/CoolTransitions";
+import SvgAnimation from "episodes/SvgAnimation/SvgAnimation";
 
 const App = () => {
   return (
@@ -38,6 +39,9 @@ const App = () => {
           </Route>
           <Route path="/cool-transitions">
             <CoolTransitions />
+          </Route>
+          <Route path="/svg-animation">
+            <SvgAnimation />
           </Route>
           <Route path="/">
             <Welcome />
